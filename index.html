@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <script src="app.js" defer></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
     <title>Simeon Ivanov</title>
 </head>
 <body>
     <div id="app">
-        <h1>Hello App!</h1>
-        <p>
-          <!-- use router-link component for navigation. -->
-          <!-- specify the link by passing the `to` prop. -->
-          <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
-          <router-link to="/foo">Go to Foo</router-link>
-          <router-link to="/bar">Go to Bar</router-link>
-        </p>
-        <!-- route outlet -->
-        <!-- component matched by the route will render here -->
-        <router-view></router-view>
+
+        <div id="header">
+            Github Pages
+        </div>
+
+        <div id="navigation">
+            <div class="dropdown" class="active" id="home">Home</div>
+            <div class="dropdown" id="about">About me</div>
+            <div class="dropdown" id="contacts">Contacts</div>
+            <div class="dropdown">
+                <button class="dropbtn">Useful links</button>
+                <div class="dropdown-content">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript" target="_blank">JavaScript</a>
+                    <a href="https://www.php.net/docs.php" target="_blank">PhP</a>
+                    <a href="https://nodejs.org/en/" target="_blank">NodeJS</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="home visible">
+                
+            </div>
+            <div class="about">
+                About me
+            </div>
+            <div class="contacts">
+                Contacts
+            </div>
+        </div>
+
+        <div id="footer">footer</div>
+
     </div>
 </body>
 </html>
