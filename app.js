@@ -18,18 +18,39 @@ $(document).ready(function(){
         $('.visible').removeClass('visible');
         $('.contacts').addClass('visible')
     });
-    /* writeText(); */
+    writeText()
 });
 //Text writing function
-/* function writeText () {
-    let text = 'some text';
-    let element = $('.home');
+function writeText() {
+    let textArray = [
+        'This is first string to write',
+        'This is second string to write',
+        'This is the third string to write'
+    ];
     let i = 0;
-    while (i < text.length) {
-        setInterval(() => {
-        let cuttedText = text.slice(0,i);
-        element.val(cuttedText);
+    let text = textArray[i];
+    let step = 0;
+    function countLength() {
+        let length = text.length;
+        if(step < length) {
+            step++;
+            $('.home').html(text.slice(0,step));
+            if(text.charAt(step) === ' ') {
+                countLength();
+            } else {
+                setTimeout(() => {
+                    countLength();
+                }, 300);
+            }
+        } else {
+            step = 0
             i++
-        }, 500);
+            if (i == textArray.length) {
+                i = 0;
+            }
+            text = textArray[i]
+            countLength();
+        }
     }
-} */
+    countLength();
+}
