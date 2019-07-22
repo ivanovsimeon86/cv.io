@@ -18,18 +18,20 @@ $(document).ready(function(){
         $('.visible').removeClass('visible');
         $('.contacts').addClass('visible')
     });
-    writeText()
-});
-//Text writing function
-function writeText() {
+
     let textArray = [
         'This is first string to write',
         'This is second string to write',
         'This is the third string to write'
     ];
+    writeText(textArray, 150, 3000)
+});
+//Text writing function
+function writeText(array, stepTime, swichTime) {
     let i = 0;
-    let text = textArray[i];
     let step = 0;
+    let textArray = array;
+    let text = textArray[i];
     function countLength() {
         let length = text.length;
         if(step < length) {
@@ -40,7 +42,7 @@ function writeText() {
             } else {
                 setTimeout(() => {
                     countLength();
-                }, 300);
+                }, stepTime);
             }
         } else {
             step = 0
@@ -49,7 +51,7 @@ function writeText() {
                 i = 0;
             }
             text = textArray[i]
-            setTimeout(() => {countLength()},5000)
+            setTimeout(() => {countLength()}, swichTime)
         }
     }
     countLength();
