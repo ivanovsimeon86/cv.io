@@ -49,7 +49,7 @@ function writeText() {
                 i = 0;
             }
             text = textArray[i]
-            countLength();
+            setTimeout(() => {countLength()},5000)
         }
     }
     countLength();
