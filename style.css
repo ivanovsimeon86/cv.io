@@ -9,6 +9,13 @@ body {
     position: sticky;
     top: 0;
 }
+.navigation-button {
+    display: none;
+    text-align: center;
+    background-color: #020544;
+    position: sticky;
+    top: 0;
+}
 .navigation h1 {
     display: inline-block;
     position: relative;
@@ -160,4 +167,71 @@ body {
 }
 .close-button:hover {
     background-color: #010221
+}
+#competitors, #preparatory, #school {
+    display: none;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-left: 20%;
+    width: 60%;
+    text-align: center;
+    background-color: #020544;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+        height: 380px;
+    }
+    .navigation-button {
+        display: block;
+    }
+    .navigation h2 {
+        width: 100%;
+        background-color: #020544;
+    }
+    .navigation-button img {
+        max-height: 2rem;
+        padding: 5px;
+    }
+    .schedule h3 {
+        margin: 0;
+        text-align: center;
+    }
+    .schedule-day {
+        width: 100%;
+        margin-bottom: 1%;
+    }
+    .schedule-day h5 {
+        margin: 0;
+    }
+    .schedule-day p {
+        margin: 0;
+    }
+    .preparatory-schedule {
+        display: none;
+    }
+    .competitors-schedule {
+
+    }
+    .school-schedule {
+        display: none;
+    }
+    .school-schedule p {
+        display: inline-block !important;
+    }
+    #preparatory, #school {
+        display: block;
+    }
+    .close-button {
+        width: 60%;
+        margin-left: 20%;
+    }
+    .partners img {
+        max-height: 80px;
+    }
 }
