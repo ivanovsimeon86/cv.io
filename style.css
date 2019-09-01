@@ -1,86 +1,163 @@
 body {
-    background-color: aliceblue;
+    padding: 0;
+    margin: 0;
+    color: #020544;
 }
-#app div {
-    box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.75);
-}
-#header {
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    background-color: #330088;
-    margin-bottom: 15px;
+.navigation {
     color: white;
-    font-size: 40px;
-    line-height: 100px;
+    background-color: #020544;
+    position: sticky;
+    top: 0;
 }
-#navigation {
-    width: 100%;
+.navigation h1 {
     display: inline-block;
-    background-color: black;
+    position: relative;
+    left: 15px;
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+.navigation h2 {
+    width: 10%;
     text-align: center;
-    margin-bottom: 15px;
+    display: inline-block;
+    float: right;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    cursor: pointer;
+    font-family: cursive;
 }
-#content {
-    margin-bottom: 15px;
+.navigation h2:hover {
+    background-color: #010221;
 }
-#footer {
-    background-color: #330088;
+.navigation div {
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    float: right;
+    font-size: 1rem;
+    line-height: 55px;
 }
-
-#content div {
-    display: none;
+.social-media {
+    margin-top: 20%;
+    max-width: 70%;
 }
-.visible {
-    display: inline-block !important;
+.main-photo-containers img {
+    max-width: 100%;
+}
+.about {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 600;
+    text-indent: 2rem;
+    text-align: center;
+}
+.trainer-photo {
+    max-width: 30%;
+    padding-left: 35%;  
+    margin-right: 35%; 
+}
+.trainer-photo img {
+    max-width: 100%;
+}
+.trainer-bio {
+    padding-left: 15%;
+    padding-right: 15%; 
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 600;
+    text-indent: 2rem;
+    text-align: center;
+}
+#google-maps img {
     width: 100%;
 }
-.active {
-    border: 1px solid black !important;
-    box-shadow: none !important;
-    background-color: #1985ef !important;
+.contacts-information {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    height: 50px;
 }
-#navigation div:hover {
+.contacts-information div {
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 10px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.p-center {
+    text-align: center;
+}
+.partners {
+    margin: 20px;
+    text-align: center;
+    border: 5px solid #020544;
+    border-radius: 20px;
+    font-family: cursive;
+}
+.partners img {
+    max-height: 150px;
+}
+.rights {
+    background-color: #020544;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.schedule-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #00000038;
+    display: none;
+    font-family: cursive;
+}
+.schedule {
+    margin-top: 5%;
+    margin-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 80%;
+    border-radius: 30px;
+    background-color: white;
+
+}
+.schedule span {
+    position: absolute;
+    top: 10%;
+    right: 13%;
+}
+.schedule h2 {
+    text-align: center;
+}
+.schedule h3 {
+    margin-left: 10%;
+}
+.schedule-day {
+    width: 19%;
+    display: inline-block;
+    text-align: center;
+}
+.schedule-day p {
+    font-size: 1rem;
+}
+.close-button {
+    width: 20%;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-left: 40%;
+    text-align: center;
+    background-color: #020544;
+    border-radius: 8px;
     cursor: pointer;
 }
-#navigation div {
-    width: 20%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    margin: 0.1%;
-    font-size: 16px;
-    border: none;
+.close-button:hover {
+    background-color: #010221
 }
-iframe{
-    width: 100%;
-    height: 800px;
-}
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-}
-.dropdown {
-position: relative;
-display: inline-block;
-}
-.dropdown-content {
-display: none;
-position: absolute;
-left: -100%;
-background-color: #f1f1f1 !important;
-min-width: 200%;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-}
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-width: 45%;
-display: inline-block;
-}
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}

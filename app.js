@@ -1,58 +1,23 @@
 $(document).ready(function(){
-// Swiching content functionality
-    $('#home').on('click', function(){
-        $('.active').removeClass('active');
-        $(this).addClass('active')
-        $('.visible').removeClass('visible');
-        $('.home').addClass('visible')
-    });
-    $('#about').on('click', function(){
-        $('.active').removeClass('active');
-        $(this).addClass('active')
-        $('.visible').removeClass('visible');
-        $('.about').addClass('visible')
-    });
-    $('#contacts').on('click', function(){
-        $('.active').removeClass('active');
-        $(this).addClass('active')
-        $('.visible').removeClass('visible');
-        $('.contacts').addClass('visible')
-    });
 
-    let textArray = [
-        'This is first string to write',
-        'This is second string to write',
-        'This is the third string to write'
-    ];
-    writeText(textArray, 150, 3000)
+    var html = $("html, body");
+
+    $("#partners").on("click", function(){
+        html.animate({scrollTop: $(".footer")[0].offsetTop}, '1000');
+    });
+    $("#contacts").on("click", function(){
+        html.animate({scrollTop: $(".contacts").offset().top - $(".navigation").height()}, '1000');
+    }); 
+    $("#schedule").on("click", function(){
+        $(".schedule-wrapper").fadeIn();
+    });
+    $(".close-button").on("click", function(){
+        $(".schedule-wrapper").fadeOut();
+    });
+    $("#team").on("click", function(){
+        html.animate({scrollTop: $(".team").offset().top - $(".navigation").height()}, '1000');
+    });
+    $("#about").on("click", function(){
+        html.animate({scrollTop: $(".about").offset().top - $(".navigation").height()}, '1000');
+    });
 });
-//Text writing function
-function writeText(array, stepTime, swichTime) {
-    let i = 0;
-    let step = 0;
-    let textArray = array;
-    let text = textArray[i];
-    function countLength() {
-        let length = text.length;
-        if(step < length) {
-            step++;
-            $('.home').html(text.slice(0,step));
-            if(text.charAt(step) === ' ') {
-                countLength();
-            } else {
-                setTimeout(() => {
-                    countLength();
-                }, stepTime);
-            }
-        } else {
-            step = 0
-            i++
-            if (i == textArray.length) {
-                i = 0;
-            }
-            text = textArray[i]
-            setTimeout(() => {countLength()}, swichTime)
-        }
-    }
-    countLength();
-}
